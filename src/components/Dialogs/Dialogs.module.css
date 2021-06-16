@@ -1,0 +1,61 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 10px;
+}
+
+.dialogs_item{
+}
+
+.item{
+    height: 70px;
+    border: 1px solid rgb(181, 179, 179);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: white;
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user{
+    font-weight: 500;
+    padding-right: 10px;
+    text-decoration: none;
+    color: dimgrey;
+}
+
+.messages{
+    border: 1px solid rgb(181, 179, 179);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.message{
+    width: fit-content;
+    border: 1px solid rgb(181, 179, 179);
+    border-radius: 10px;
+    margin: 10px;
+   
+}
+
+.message:nth-child(odd) {
+    text-align: right;
+    margin-left: auto;
+    background-color: rgb(166, 184, 226);;
+}
+
+.message:nth-child(even) {
+    margin-right: auto;
+    background-color:rgb(223, 221, 221);
+}
+
+.text{
+    margin: 10px 20px;
+}
+
+.active{
+    color: #3838ff;
+}

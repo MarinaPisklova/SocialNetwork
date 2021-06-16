@@ -1,0 +1,46 @@
+.postForm{
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid rgb(181, 179, 179);
+  border-radius: 10px;
+}
+
+.form{
+  background-color: rgb(238, 238, 238);
+  width: 96%;
+  margin: 0px 0;
+  padding: 0px 10px 20px;
+  border: none;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(181, 179, 179);
+  font-size: 14px; 
+}
+
+.nameForm{
+  margin: 0;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.btn{
+  display: block;
+  background-color: rgb(200, 216, 253);
+  color: rgb(57, 57, 57);
+  border-radius: 10px;
+  border: 1px solid grey;
+  width: 150px;
+  line-height: 30px;
+  margin: 10px 0;
+  margin-right: 0;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(152, 152, 236);
+}

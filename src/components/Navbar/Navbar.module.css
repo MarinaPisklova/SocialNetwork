@@ -1,0 +1,27 @@
+.nav{
+    grid-area: n;
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(181, 179, 179);
+}
+
+.link{
+  text-decoration: none;
+  color: rgb(81, 80, 80);
+  font-weight: 600;
+}
+
+.item{
+  margin-left: 20px;
+  line-height: 30px;
+}
+
+.lastItem{
+  margin-top: 40px;
+}
+
+.active{
+  color:rgb(102, 147, 250);
+}
