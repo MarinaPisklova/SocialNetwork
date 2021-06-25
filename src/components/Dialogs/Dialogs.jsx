@@ -1,44 +1,19 @@
 import classes from "./Dialogs.module.css";
-import { NavLink } from "react-router-dom";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
 const Dialogs = (props) => {
+
+    let dialogsElements = props.dialogsData.map((dialog) => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} />);
+    let messagesElements = props.messagesData.map((message) => <Message key={message.id} message={message.message} />);
+debugger;
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogs_item}>
-                <div className={classes.item}>
-                    <NavLink to='/dialogs/1' className={classes.user} activeClassName={classes.active}>Marina</NavLink>
-                </div>
-                <div className={classes.item}>
-                     <NavLink to='/dialogs/2' className={classes.user} activeClassName={classes.active}>Victor</NavLink>
-                </div>
-                <div className={classes.item}>
-                     <NavLink to='/dialogs/3' className={classes.user} activeClassName={classes.active}>Valera</NavLink>
-                </div>
-                <div className={classes.item}>
-                     <NavLink to='/dialogs/4' className={classes.user} activeClassName={classes.active}>Katya</NavLink>
-                </div>
-                <div className={classes.item}>
-                     <NavLink to='/dialogs/5' className={classes.user} activeClassName={classes.active}>Vasay</NavLink>
-                </div>
-                <div className={classes.item}>
-                     <NavLink to='/dialogs/6' className={classes.user} activeClassName={classes.active}>Alex</NavLink>
-                </div>
-                <div className={classes.item}>
-                     <NavLink to='/dialogs/7' className={classes.user} activeClassName={classes.active}>Sasha</NavLink>
-                </div>
+                {dialogsElements}
             </div>
             <div className={classes.messages}>
-                <div className={classes.message}>
-                    <div className={classes.text}>Hi</div></div>
-                <div className={classes.message}>
-                    <div className={classes.text}>How is your</div>
-                </div>
-                <div className={classes.message}>
-                    <div className={classes.text}>Hiszdxfcgthyuj</div>
-                </div>
-                <div className={classes.message}>
-                    <div className={classes.text}>Hiasdfxgtchujb[p;</div>
-                </div>
+                {messagesElements}
             </div>
         </div>
     )
