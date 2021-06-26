@@ -1,5 +1,4 @@
 import classes from "./ProfileInfo.module.css";
-import avatar from '../../../images/avatar.jpg';
 
 const ProfileInfo = () => {
   return (
@@ -9,7 +8,7 @@ const ProfileInfo = () => {
           src='https://img.freepik.com/free-photo/aerial-drone-panorama-view-of-chisinau-moldova-at-sunset_1268-17441.jpg?size=626&ext=jpg'></img>
       </div>
       <div className={classes.profile}>
-        <img className={classes.avatar} alt='3' src={avatar}></img>
+        <img className={classes.avatar} alt='3' src="/images/avatar.jpg"></img>
         <div className={classes.info}>
           <p className={classes.name}>Marina Pisklova</p>
           <ul className={classes.list}>

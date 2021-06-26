@@ -15,7 +15,7 @@ body{
   'h h'
   'n c';
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 240px 9fr;
 }
 
 .app-wrapper-content{

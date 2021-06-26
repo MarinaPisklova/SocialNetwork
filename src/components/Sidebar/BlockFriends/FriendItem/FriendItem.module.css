@@ -1,0 +1,21 @@
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: 1px solid grey;
+}
+
+.name{
+    margin: 0;
+}
+
+.item{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: rgb(81, 80, 80);
+    font-weight: 600;
+}

@@ -1,0 +1,20 @@
+.title{
+    text-decoration: none;
+    color: rgb(81, 80, 80);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.blockFriends{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(181, 179, 179);
+    margin-top: 10px;
+    padding: 10px 20px;
+}
