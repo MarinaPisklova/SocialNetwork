@@ -1,11 +1,59 @@
+.block{
+    flex-basis: 85%;
+    
+}
+
 .dialogs{
-    display: grid;
-    grid-template-columns: 10fr 2fr;
-    padding: 10px;
+    display: flex;
+    align-items: stretch;
 }
 
 .messages{
-    border: 1px solid rgb(181, 179, 179);
-    border-radius: 10px;
+    border-top: 1px solid rgb(181, 179, 179);
+    border-left: 1px solid rgb(181, 179, 179);
+    border-top-left-radius: 10px;
     background-color: white;
+    flex-basis: 85%;
+    height: 600px;
 }
+
+.dialogs_item{
+    flex-basis: 15%;
+}
+
+.textForm{
+    display: flex;
+    justify-content: stretch;
+
+}
+
+.form{
+    height: 50px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    border-bottom: 1px solid rgb(181, 179, 179);
+    border-left: 1px solid rgb(181, 179, 179); 
+    
+    border-bottom-left-radius: 10px;
+    font-size: 14px; 
+    padding: 0;
+    flex-grow: 10;
+}
+
+.btn{
+    height: 51px;
+    border: none;
+    
+    background-color: rgb(200, 216, 253);
+    color: rgb(57, 57, 57);
+    border-bottom-right-radius: 10px;
+    border-right: 1px solid rgb(181, 179, 179); 
+    border-bottom: 1px solid rgb(181, 179, 179); 
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 0;
+  }
+  
+  .btn:hover{
+    background-color: rgb(152, 152, 236);
+  } 

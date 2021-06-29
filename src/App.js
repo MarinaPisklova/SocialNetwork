@@ -1,6 +1,5 @@
 import './App.css';
 import Header from './components/Header/Header';
-
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
@@ -14,10 +13,10 @@ const App = (props) => {
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
-        <Sidebar state={props.state.sidebarPage} />
+        <Sidebar state={props.store.getState().sidebarPage} />
         <div className='app-wrapper-content'>
-          <Route path='/dialogs' render={() => <Dialogs state={props.state.messagesPage} />} />
-          <Route path='/profile' render={() => <Profile state={props.state.profilePage} />} />
+          <Route path='/dialogs' render={() => <Dialogs store = {props.store} />} />
+          <Route path='/profile' render={() => <Profile store = {props.store} />} />
           <Route path='/news' render={() => <News />} />
           <Route path='/music' render={() => <Music />} />
           <Route path='/settings' render={() => <Settings />} />

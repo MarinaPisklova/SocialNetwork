@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   vertical-align: top;
-  margin: 20px 10px;
+  margin: 0px 10px 10px;
   padding: 10px;
   border: 1px solid rgb(174, 172, 172);
   border-radius: 10px;
@@ -27,6 +27,29 @@
   margin-left: 40px;
 }
 
-.likes{
+.likeBox{
   width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.heart{
+  height: 20px;
+  fill: rgb(155, 155, 155);
+  cursor: pointer;
+}
+
+.likes{
+  color: rgb(155, 155, 155);
+  padding-left: 5px;
+}
+
+.activeHeart{
+  fill: red;
+}
+
+.activeText{
+  color: red;
 }

@@ -1,7 +1,12 @@
+.postsElements{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .postForm{
   text-align: center;
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px 0;
   background-color: white;
   border: 1px solid rgb(181, 179, 179);
   border-radius: 10px;
