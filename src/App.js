@@ -13,10 +13,10 @@ const App = (props) => {
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
-        <Sidebar state={props.store.getState().sidebarPage} />
+        <Sidebar state={props.state.sidebarPage} />
         <div className='app-wrapper-content'>
-          <Route path='/dialogs' render={() => <Dialogs store = {props.store} />} />
-          <Route path='/profile' render={() => <Profile store = {props.store} />} />
+          <Route path='/dialogs' render={() => <Dialogs state = {props.state} dispatch={props.dispatch}/>} />
+          <Route path='/profile' render={() => <Profile state = {props.state} dispatch={props.dispatch}/>} />
           <Route path='/news' render={() => <News />} />
           <Route path='/music' render={() => <Music />} />
           <Route path='/settings' render={() => <Settings />} />

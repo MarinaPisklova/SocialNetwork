@@ -7,17 +7,17 @@ import './index.css';
 import App from './App';
 
 
-let rerenderEntireTree = (store) =>{
+let rerenderEntireTree = (state) =>{
     ReactDOM.render(
       <React.StrictMode>
-        <App store={store} />
+        <App state={state} dispatch={store.dispatch.bind(store)}/>
       </React.StrictMode>,
       document.getElementById('root')
     );
   }
 
 store.subscribe(rerenderEntireTree);
-rerenderEntireTree(store);
+rerenderEntireTree(store.getState());
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

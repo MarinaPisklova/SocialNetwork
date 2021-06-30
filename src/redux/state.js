@@ -1,3 +1,8 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+
 let store = {
     _state: {
         profilePage: {
@@ -42,49 +47,62 @@ let store = {
         }
     },
 
-    _rerenderEntireTree(){
+    _callSubscriber(){
         console.log("no subscibers");
+    },
+
+    subscribe(observer){
+        this._callSubscriber = observer;
     },
 
     getState(){
         return this._state;
     },
-
-    addPost() {
-        let newPost = {
-            id: this._state.profilePage.postsData.length + 1,
-            message: this._state.profilePage.newPostText,
-            likesCount: 0,
+   
+    dispatch(action){
+        if(action.type === ADD_POST){
+            let newPost = {
+                id: this._state.profilePage.postsData.length + 1,
+                message: this._state.profilePage.newPostText,
+                likesCount: 0,
+            }
+            this._state.profilePage.postsData.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this.getState());
         }
-        this._state.profilePage.postsData.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._rerenderEntireTree(this);
-    },
-
-    updateNewPostText(newText){
-        this._state.profilePage.newPostText = newText;
-        this._rerenderEntireTree(this);
-    },
-    
-    addNewMessage(){
-        let newMessage = {
-            id: this._state.messagesPage.messagesData.length + 1,
-            message: this._state.messagesPage.newMessageText,
-            owner: true,
+        else if(action.type === UPDATE_NEW_POST_TEXT){
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this.getState());
         }
-        this._state.messagesPage.messagesData.push(newMessage);
-        this._state.messagesPage.newMessageText =  '';
-        this._rerenderEntireTree(this);
-    },
-    
-    updateNewMessageText(messageText){
-        this._state.messagesPage.newMessageText = messageText;
-        this._rerenderEntireTree(this);
-    },
-
-    subscribe(observer){
-        this._rerenderEntireTree = observer;
-    },
+        else if(action.type === ADD_MESSAGE){
+            let newMessage = {
+                id: this._state.messagesPage.messagesData.length + 1,
+                message: this._state.messagesPage.newMessageText,
+                owner: true,
+            }
+            this._state.messagesPage.messagesData.push(newMessage);
+            this._state.messagesPage.newMessageText =  '';
+            this._callSubscriber(this.getState());
+        }
+        else if(action.type === UPDATE_NEW_MESSAGE_TEXT){
+            this._state.messagesPage.newMessageText = action.messageText;
+            this._callSubscriber(this.getState());
+        }
+    }
 }
+
+export const addPostActionCreator = () => ({type: ADD_POST});
+
+export const updateNewPostTextActionCreator = (text) => ({
+        type: UPDATE_NEW_POST_TEXT,
+        newText: text
+    }); 
+
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
+
+export const updateNewMessageTextActionCreator = (newMessage) => ({
+    type: UPDATE_NEW_MESSAGE_TEXT,
+    messageText: newMessage
+}); 
 
 export default store;
