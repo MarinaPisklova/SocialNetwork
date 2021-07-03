@@ -18,23 +18,31 @@ let initialState = {
         { id: 4, message: 'Hiasdhjgs f gdh h h;', owner: false  },
         { id: 5, message: 'azsxdfghyujikl', owner: true  },
     ],
-    newMessageText: "",
+    newMessageText: '',
 };
 
 const dialogsReducer = (state = initialState, action) => {
     switch(action.type){
-        case ADD_MESSAGE:
+        case ADD_MESSAGE:{
+            let body = state.newMessageText;
+            if(body === '') return state;
             let newMessage = {
                 id: state.messagesData.length + 1,
-                message: state.newMessageText,
+                message: body,
                 owner: true,
             }
-            state.messagesData.push(newMessage);
-            state.newMessageText =  '';
-            return state;
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.messageText;
-            return state;
+            return {
+                ...state,
+                newMessageText: '',
+                messagesData: [...state.messagesData, newMessage]
+            };
+        }
+        case UPDATE_NEW_MESSAGE_TEXT:{
+            return {
+                ...state,
+                newMessageText: action.messageText,
+            };
+        }
         default:
             return state;
     }

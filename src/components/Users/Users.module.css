@@ -1,0 +1,79 @@
+.userItem{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.container{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 1px solid rgb(10, 10, 10);
+}
+
+.container_left{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid rgb(79, 79, 81);
+    background-color: rgb(255, 255, 255);
+    color: gray;
+    padding: 0px 10px;
+
+}
+
+.btn{
+    background-color: rgb(152, 173, 250);
+    color: rgb(25, 23, 23);
+    border-radius: 10px;
+    border: 1px solid rgb(85, 93, 255);
+    width: 100px;
+    line-height: 30px;
+    margin: 10px 0;;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn_show{
+    background-color: rgb(152, 173, 250);
+    color: rgb(59, 55, 55);
+    border-radius: 10px;
+    border: 1px solid rgb(85, 93, 255);
+    width: 200px;
+    line-height: 60px;
+    margin: 10px 0;;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.location_info{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+.location{
+    margin: 0;
+}
+
+.block_btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

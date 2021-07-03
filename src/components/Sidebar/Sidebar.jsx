@@ -6,7 +6,7 @@ const Sidebar = (props) => {
     return (
         <div className={classes.nav}>
             <Navbar />
-            <BlockFriends friendsData={props.state.friends} />
+            <BlockFriends friendsData={props.sidebarPage.friends} />
         </div>
     )
 }
