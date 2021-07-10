@@ -6,9 +6,9 @@ let store = {
     _state: {
         profilePage: {
             postsData: [
-                { id: 1, message: 'How are you?', likesCount: 10},
-                { id: 2, message: 'Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?', likesCount: 11},
-                { id: 3, message: 'That\'s my first post', likesCount: 33},
+                // { id: 1, message: 'How are you?', likesCount: 10},
+                // { id: 2, message: 'Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?', likesCount: 11},
+                // { id: 3, message: 'That\'s my first post', likesCount: 33},
             ],
             newPostText: "",
         },

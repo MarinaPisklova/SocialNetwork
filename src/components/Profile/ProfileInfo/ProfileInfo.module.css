@@ -9,20 +9,22 @@
   border: 1px solid rgb(181, 179, 179);
 }
 
+.wrapper {
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid rgb(181, 179, 179);
+  border-radius: 10px;
+}
+
 .profile{
   height: fit-content;
   display: flex;
-  background-color: white;
-  margin-top: 10px;
   padding-bottom: 10px;
-  border-radius: 10px;
-  border: 1px solid rgb(181, 179, 179);
-
 }
 
 .avatar{
   margin-top: 10px;
-  width: 150px;
+  width: 150px; 
   border-radius: 50%;
   border: 1px solid grey;
   margin-left: 10px;
@@ -39,4 +41,9 @@
 
 .name{
   font-weight: 500;
+}
+
+.contacts{
+  margin-left: 10px;
+  
 }

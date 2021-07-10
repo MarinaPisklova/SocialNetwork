@@ -79,8 +79,6 @@
 }
 
 .select{
-    /* margin-left: auto;
-    margin-right: auto; */
     width: 60px;
     margin-bottom: 20px;
     color: rgb(61, 61, 61);
@@ -99,4 +97,9 @@
 
 .unselected {
     font-weight: 400;
+}
+
+.fetchIcon{
+    display: block;
+    margin: 35% auto;
 }
