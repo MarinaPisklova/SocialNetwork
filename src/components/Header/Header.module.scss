@@ -1,3 +1,5 @@
+$title_color:rgb(75, 107, 223);
+
 .header{
     width: 900px;
     margin: 0 auto;
@@ -6,15 +8,19 @@
     display: flex;
     border-radius: 10px;
     border: 1px solid rgb(181, 179, 179);
-}
-  
-.logo{
-    width: 80px;
-    margin-left: 20px;
+
+    &__logo{
+        width: 80px;
+        margin-left: 20px;
+    }
 }
 
 .name{
     display: inline;
     margin: auto 10px;
-    color:rgb(75, 107, 223);
+    color: $title_color;
+}
+
+.loginBlock{
+    float:right;
 }

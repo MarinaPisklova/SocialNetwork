@@ -3,6 +3,7 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React from "react";
 
+
 const Dialogs = (props) => {
     let dialogsElements = props.dialogsPage.dialogsData.map((dialog) => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id}  />);
     let messagesElements = props.dialogsPage.messagesData.map((message) => <Message key={message.id} message={message.message} owner={message.owner}/>);
@@ -17,7 +18,7 @@ const Dialogs = (props) => {
         let newMessage = newMessageElement.current.value;
         props.updateNewMessageText(newMessage);
     }
-    
+
     return (
         <div className={classes.container}>
             <div className={classes.dialogs}>
@@ -38,4 +39,4 @@ const Dialogs = (props) => {
     )
 }
 
-export default Dialogs;
+export default Dialogs;  

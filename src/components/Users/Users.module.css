@@ -42,6 +42,10 @@
     font-weight: bold;
 }
 
+.btn:disabled{
+    background-color: rgb(250, 152, 152);
+}
+
 .btn_show{
     background-color: rgb(152, 173, 250);
     color: rgb(59, 55, 55);
@@ -92,6 +96,7 @@
 
 .selected {
     font-weight: bold;
+    color: red;
 }
 
 

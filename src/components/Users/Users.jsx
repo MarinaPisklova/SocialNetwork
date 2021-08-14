@@ -9,11 +9,12 @@ let Users = (props) => {
     for (let pageInd = 1; pageInd <= pagesCount; pageInd++) {
         pages.push(pageInd);
     }
-
+    console.log(props.currentPage);
     return (
         <div className={classes.users}>
             <div className={classes.select}>
                 {
+                    
                     pages.map(p => {
                         return <span className={props.currentPage === p ? classes.selected : undefined} key={p} onClick={(e) => { props.onPageChanged(p) }}>{p}</span>;
                     })
@@ -28,9 +29,9 @@ let Users = (props) => {
                             </NavLink>
                             <div >
                                 {
-                                    u.isFollow
-                                        ? <button className={classes.btn} onClick={() => { props.unfollow(u.id) }}>Unfollow</button>
-                                        : <button className={classes.btn} onClick={() => { props.follow(u.id) }}>Follow</button>
+                                    u.followed
+                                        ? <button className={classes.btn} disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {props.unfollow(u.id);}}>Unfollow</button>
+                                        : <button className={classes.btn} disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {props.follow(u.id)}}>Follow</button>
                                 }
                             </div>
                         </div>

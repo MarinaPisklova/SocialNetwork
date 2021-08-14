@@ -1,5 +1,6 @@
 import Preloader from "../../common/Preloader/Preloader";
 import classes from "./ProfileInfo.module.css";
+import ProfileStatus from "./ProfileStatus/ProfileStatus";
 
 const ProfileInfo = (props) => {
   if(!props.profile) {
@@ -7,7 +8,6 @@ const ProfileInfo = (props) => {
       <Preloader />
     )
   }
-
   return (
     <div>
       <div className={classes.covering}>
@@ -23,6 +23,7 @@ const ProfileInfo = (props) => {
               <li className={classes.item}>Обо мне: {props.profile.aboutMe}</li>
               <li className={classes.item}>В поиске работы: {props.profile.lookingForAJob ? 'да' : 'нет'}</li>
               <li className={classes.item}>Какую работу ищу: {props.profile.lookingForAJobDescription}</li>
+              <ProfileStatus {...props} />
             </ul>
           </div>
         </div>
