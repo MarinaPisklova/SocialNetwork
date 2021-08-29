@@ -1,6 +1,5 @@
 import { profileAPI } from "../api/api";
 const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const NEW_LIKE = 'NEW_LIKE';
 const UNLIKE = 'UNLIKE';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -13,14 +12,13 @@ let initialState = {
         { id: 2, message: 'Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?Have you seen last new movies?', likesCount: 11, isMyLike: false, num: false },
         { id: 3, message: 'That\'s my first post', likesCount: 33, isMyLike: true, num: false },
     ],
-    newPostText: '',
     status: '',
 };
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST: {
-            let body = state.newPostText;
+            let body = action.newPostText;
             if (body === '') return state;
             let newPost = {
                 id: state.postsData.length + 1,
@@ -31,14 +29,7 @@ const profileReducer = (state = initialState, action) => {
             }
             return {
                 ...state,
-                newPostText: '',
                 postsData: [...state.postsData, newPost]
-            }
-        }
-        case UPDATE_NEW_POST_TEXT: {
-            return {
-                ...state,
-                newPostText: action.newText
             }
         }
         case NEW_LIKE: {
@@ -90,10 +81,9 @@ const profileReducer = (state = initialState, action) => {
     }
 }
 
-export const addPost = () => ({ type: ADD_POST });
+export const addPost = (newPostText) => ({ type: ADD_POST, newPostText });
 export const addNewLike = (id) => ({ type: NEW_LIKE, idPost: id });
 export const addUnlike = (id) => ({ type: UNLIKE, idPost: id });
-export const updateNewPostText = (text) => ({ type: UPDATE_NEW_POST_TEXT, newText: text });
 const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
 const setStatus = (status) => ({ type: SET_STATUS, status });
 
